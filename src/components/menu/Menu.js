@@ -3,7 +3,6 @@ import React from 'react'
 import "./styles.css"
 import { Link } from 'react-router-dom';
 
-
 function Menu(){
 
     const pages = [
@@ -12,7 +11,6 @@ function Menu(){
         {name: "chat", path: "/chat"},
         {name: "sair", path: "/"},
     ]
-
 
     return(
         <div className="ctn-menu">
@@ -27,9 +25,7 @@ function Menu(){
                     </div>
                 ))}
             </div>
-          
         </div>
-
     );
 }
 
