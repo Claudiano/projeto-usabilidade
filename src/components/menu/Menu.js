@@ -15,7 +15,7 @@ function Menu(){
     return(
         <div className="ctn-menu">
             <div className="cnt-image">
-                <h1> imagem</h1>
+                <h1> Logo</h1>
 
             </div>
             <div className="list-menu">

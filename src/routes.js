@@ -4,6 +4,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Home from "./pages/home/Home";
+import PageChat from "./pages/chat/index";
 
 function Routes(){
     return (
@@ -11,6 +12,7 @@ function Routes(){
         <BrowserRouter>
             <Switch>
                 <Route exact path="/" component={Home} />
+                <Route exact path="/chat" component={PageChat} />
             </Switch>
         </BrowserRouter>
     );
