@@ -2,9 +2,10 @@
 .ctn-professor{
     width: 200px;
     height: 250px;
-    background: #D8D8D8;
+    background: #F2F2F2;
     justify-content: center;
     text-align: center;
+    padding: 10px;
 }
 
 .ctn-professor h1{
@@ -18,5 +19,22 @@
     height: 120px;
     background: #A4A4A4;
     border-radius: 50%;
-    margin: 20px auto;
+    margin: 10px auto;
+}
+
+.btn{
+    width: 100px;
+    height: 30px;
+    margin-top: 15px;
+    background: none;
+    border-color: #088A29;
+
+    font-weight: bold;
+    color: #088A29;
+}
+
+.btn:hover{
+    color: #ffffff;
+    background-color: #088A29;
+
 }

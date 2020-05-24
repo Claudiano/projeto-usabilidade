@@ -11,12 +11,12 @@ function Menu(){
         {name: "chat", path: "/chat"},
         {name: "sair", path: "/"},
     ]
+    
 
     return(
         <div className="ctn-menu">
             <div className="cnt-image">
                 <h1> Logo</h1>
-
             </div>
             <div className="list-menu">
                 {pages.map( page => (
