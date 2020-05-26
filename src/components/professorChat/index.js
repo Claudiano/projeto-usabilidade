@@ -1,6 +1,7 @@
 import React from 'react'
 
 import './styles.css'
+import ChatMensagens from '../chatMensagens'
 
 function ProfessoChat(props){
 
@@ -24,7 +25,11 @@ function ProfessoChat(props){
 }
 
 const abrirChat = (nome) => {
-    console.log("chat clicado em: " + nome)
+    return (
+        <>
+            < ChatMensagens />
+        </>
+    )
 }
 
 
