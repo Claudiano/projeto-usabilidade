@@ -58,9 +58,12 @@ export default class PageChat extends Component{
                                         )
                                         )}
                 </section>
-                <ChatMensagens show={this.state.show} handleClose={this.hideModal}/>
-    
+                <div className="ctn-chat">
+
+                    <ChatMensagens show={this.state.show} handleClose={this.hideModal}/>
+                </div>
             </div>
+    
 
         </div>
         

@@ -1,9 +1,8 @@
 .ctn-mensagens{
-  display: flex;
-  height: 100vh;
+  display: flex;  
+  justify-content: flex-end;
+  height: 100%;
   width: 100%;
-  align-items: center;
-  justify-content: center;
 
 }
 
@@ -12,7 +11,7 @@
     flex-direction: column;
     font-family: Arial, sans-serif;
     height: 600px;
-    width: 400px;
+  width: 400px;
     justify-content: space-between;
     background: #CEF6F5;
   }

@@ -5,7 +5,6 @@ import ChatMensagens from '../chatMensagens'
 
 function ProfessoChat(props){
 
-    const visible = true
     const professor = {
         nome: props.nome,
         disciplina: props.disciplina,
