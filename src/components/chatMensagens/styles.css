@@ -69,3 +69,7 @@
     background: #89ddff;
     border-color: #1abeff;
   }
+
+  .display-none{
+    display: none;
+  }

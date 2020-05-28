@@ -8,9 +8,10 @@ const myId = uid()
 const socket = io('http://localhost:8080')
 socket.on('connect', () => console.log('[IO] Connect => A new connection has been established'))
 
-function ChatMensagens(){
+function ChatMensagens({ handleClose, show, children }){
     const [message, updateMessage] = useState('')
     const [messages, updateMessages] = useState([])
+    const showHideClassName = show ? "ctn-mensagens" : "display-none"
 
     console.log(myId)
 
@@ -41,9 +42,10 @@ function ChatMensagens(){
     }
 
     return (
-        <div className="ctn-mensagens">
+        <div className= {showHideClassName}>
 
             <main className="container">
+                <button onClick={handleClose}>close</button>
                 <ul className="list">
 
                     {messages.map((m, index) => (

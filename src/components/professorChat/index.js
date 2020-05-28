@@ -5,6 +5,7 @@ import ChatMensagens from '../chatMensagens'
 
 function ProfessoChat(props){
 
+    const visible = true
     const professor = {
         nome: props.nome,
         disciplina: props.disciplina,
@@ -19,18 +20,12 @@ function ProfessoChat(props){
 
            <h1> Nome: {professor.nome}</h1> 
            <h1> Status: {professor.status}</h1> 
-           <button className="btn" onClick={ (e) => abrirChat(professor.nome)}>CHAMAR</button>
+           <button className="btn" onClick={ (e) => console.log("botão clicado")}>CHAMAR</button>
+
         </div>
     )
 }
 
-const abrirChat = (nome) => {
-    return (
-        <>
-            < ChatMensagens />
-        </>
-    )
-}
 
 
 export default ProfessoChat;

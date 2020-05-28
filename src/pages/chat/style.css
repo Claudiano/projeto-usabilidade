@@ -27,3 +27,43 @@
 }
 
 
+.ctn-professor{
+    width: 200px;
+    height: 250px;
+    background: #F2F2F2;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.ctn-professor h1{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.ctn-logo{
+    width: 120px;
+    height: 120px;
+    background: #A4A4A4;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.btn-chat{
+    width: 100px;
+    height: 30px;
+    margin-top: 15px;
+    background: none;
+    border-color: #088A29;
+
+    font-weight: bold;
+    color: #088A29;
+}
+
+.btn-chat:hover{
+    color: #ffffff;
+    background-color: #088A29;
+
+}
+
