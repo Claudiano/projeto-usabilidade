@@ -10,7 +10,8 @@ export default class PageChat extends Component{
         
     state = {
         show: false,
-        professores : []      
+        professores : [],
+        professorSelecionado: {}      
     }
 
     componentDidMount(){
@@ -24,7 +25,7 @@ export default class PageChat extends Component{
         this.setState({professores: users})
     }
     
-    showModal = () => {
+    showModal = (p) => {
         this.setState({show: true})
     };
     
@@ -54,7 +55,16 @@ export default class PageChat extends Component{
                                         <h1> Nome: {professor.nome}</h1> 
                                         <h1> Status: {professor.status}</h1> 
 
-                                        <button className="btn-chat" onClick={ this.showModal}>CHAMAR</button>
+                                        <button className="btn-chat" 
+                                        onClick={ 
+                                            (e) => {                                             
+                                                this.setState({professorSelecionado: professor})
+                                                this.showModal(professor)
+                                                console.log(this.state.professorSelecionado)
+                                                
+                                            }
+                                        
+                                        }>CHAMAR</button>
                                     </div>
                             </div>           
                                         
@@ -63,7 +73,7 @@ export default class PageChat extends Component{
                 </section>
                 <div className="ctn-chat">
 
-                    <ChatMensagens show={this.state.show} handleClose={this.hideModal}/>
+                    <ChatMensagens show={this.state.show} handleClose={this.hideModal} userSelecionado={this.state.professorSelecionado}/>
                 </div>
 
             </div>

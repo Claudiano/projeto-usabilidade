@@ -6,13 +6,13 @@
     justify-content: center;
     text-align: center;
     padding: 10px;
+    box-shadow: 0px 4px 6px 0px grey;
 }
 
 .ctn-professor h1{
     font-size: 15px;
     font-weight: bold;
 }
-
 
 .ctn-logo{
     width: 120px;

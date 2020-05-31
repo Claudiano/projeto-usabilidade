@@ -2,6 +2,7 @@
   display: flex;  
   height: 600px;
   width: 350px;
+  border: 3px solid #0080FF;;
 }
 
 .container {
@@ -9,62 +10,92 @@
     flex-direction: column;
     font-family: Arial, sans-serif;
     justify-content: space-between;
-    background: #CEF6F5;
-  }
-  
-  .form {
-    background: #434758;
-    padding: 1rem;
-  }
-  
-  .form__field {
-    border: 1px solid #dcdcdc;
-    border-radius: 5px;
-    color: #333;
-    font-size: 1.2rem;
-    padding: .5rem 1rem;
-    width: 100%;
-  }
-  
-  .form__field:focus {
-    border-color: #a3f7ff;
-    box-shadow: 0 0 7px #a3f7ff;
-    outline: none;
-  }
-  
-  .list {
-    margin: 0;
-    padding: 1rem;
-  }
-  
-  .list__item {
-    list-style: none;
-  }
-  
-  .list__item.list__item--mine {
-    text-align: right;
-  }
-  
-  .message {
-    border: 1px solid transparent;
-    border-radius: 5px;
-    display: inline-block;
-    list-style: none;
-    margin-bottom: 1rem;
-    padding: .5rem 1rem;
-  }
-  
-  .message.message--mine {
-    background: #c3e88d;
-    border-color: #82be27;
-    text-align: right;
-  }
-  
-  .message.message--other {
-    background: #89ddff;
-    border-color: #1abeff;
-  }
+    background: #CEF6F5; 
+}
 
-  .display-none{
-    display: none;
-  }
+.chat-header{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background: #0080FF;
+
+}
+
+.chat-header button{
+  background: #0080FF;
+  color: #000000;
+  width: 10%;
+  height: 25px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.chat-header p{
+  display: flex;
+  width: 90%;
+  height: 25px;
+  border: none;
+  align-items: center;
+  margin-left: 5px;
+  font-weight: bold;
+  color: #ffffff;
+}
+  
+.form {
+  background: #0080FF;
+  padding: 10px;
+  display: flex;
+}
+
+.form__field {
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  color: #333;
+  font-size: 1.2rem;
+  padding: .5rem 1rem;
+  width: 90%;
+}
+
+.form__field:focus {
+  border-color: #a3f7ff;
+  box-shadow: 0 0 7px #a3f7ff;
+  outline: none;
+}
+
+.list {
+  margin: 0;
+  padding: 1rem;
+}
+
+.list__item {
+  list-style: none;
+}
+
+.list__item.list__item--mine {
+  text-align: right;
+}
+
+.message {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  display: inline-block;
+  list-style: none;
+  margin-bottom: 1rem;
+  padding: .5rem 1rem;
+}
+
+.message.message--mine {
+  background: #c3e88d;
+  border-color: #82be27;
+  text-align: right;
+}
+
+.message.message--other {
+  background: #89ddff;
+  border-color: #1abeff;
+}
+
+.display-none{
+  display: none;
+}

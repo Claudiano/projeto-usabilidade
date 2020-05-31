@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import io from 'socket.io-client'
 import {v4 as uid} from 'uuid'
+import IconButton from '@material-ui/core/IconButton';
+import SendIcon from '@material-ui/icons/Send';
 
 import './styles.css'
 
@@ -8,7 +10,7 @@ const myId = uid()
 const socket = io('http://localhost:8080')
 socket.on('connect', () => console.log('[IO] Connect => A new connection has been established'))
 
-function ChatMensagens({ handleClose, show, children }){
+function ChatMensagens({ handleClose, show, userSelecionado, prochildren }){
     const [message, updateMessage] = useState('')
     const [messages, updateMessages] = useState([])
     const showHideClassName = show ? "ctn-mensagens" : "display-none"
@@ -45,7 +47,10 @@ function ChatMensagens({ handleClose, show, children }){
         <div className= {showHideClassName}>
 
             <main className="container">
-                <button onClick={handleClose}>close</button>
+                <div className="chat-header">
+                    <p>{userSelecionado.nome}</p>
+                    <button onClick={handleClose}>X</button>
+                </div>
                 <ul className="list">
 
                     {messages.map((m, index) => (
@@ -57,7 +62,7 @@ function ChatMensagens({ handleClose, show, children }){
                     ))}
                 
                 </ul>
-                <form className="form" onSubmit={handleFormSubmit} >
+                <form className="form" >
                     <input 
                         className="form__field" 
                         onChange={hadleInputChange}
@@ -65,6 +70,9 @@ function ChatMensagens({ handleClose, show, children }){
                         type="text"
                         value={message}
                         />
+                    <IconButton>
+                        <SendIcon onClick={handleFormSubmit}  />
+                    </IconButton>
                 
                 </form>
             </main>
