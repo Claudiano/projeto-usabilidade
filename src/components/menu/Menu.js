@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function Menu(){
 
     const pages = [
-        {name: "Inicio", path: "/"},
+        {name: "Inicio", path: "/home"},
         {name: "Turmas", path: "/turmas"},
         {name: "chat", path: "/chat"},
         {name: "sair", path: "/"},
