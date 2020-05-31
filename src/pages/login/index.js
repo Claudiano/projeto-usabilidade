@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 
 import './style.css'
-import { render } from '@testing-library/react'
+import ServiceDb from '../../provider/serviceDb'
+import history from '../../history'
+
 
 export default class LoginPage extends Component{
 
@@ -12,13 +14,20 @@ export default class LoginPage extends Component{
     }
 
     logar = () => {
-        alert("usuario: " + this.state.login + ", senha: "+ this.state.senha)
+        let service = new ServiceDb
+        let result = service.validateUser(this.state.login, this.state.senha)
+
+        if(result){
+            history.push("/home", {user: result})
+        } else {
+            alert("usuario não encontrado")
+        }
     }
 
     render() {
 
         return(
-            <div className="ctn-page">
+            <div className="ctn-pageLogin">
                 <div className="ctn-login">        
                     <div className="ctn-form">
                         <h1>Bem vindo</h1>

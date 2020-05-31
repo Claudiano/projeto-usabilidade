@@ -4,37 +4,40 @@ import ProfessoChat from '../../components/professorChat'
 
 import './style.css'
 import ChatMensagens from '../../components/chatMensagens'
+import ServiceDb from '../../provider/serviceDb'
 
 export default class PageChat extends Component{
-
+        
     state = {
         show: false,
-        professores : [
-            { nome: "Antonio",status: "online" },
-            { nome: "Carlos",status: "online" },
-            { nome: "Felipe",status: "online" },
-            { nome: "Andres",status: "online" },
-            { nome: "Zeca",status: "online" },
-            { nome: "Luis",status: "online" },
-            { nome: "Toninho",status: "online" },
-            { nome: "danilo",status: "online" },
-        ]
-    
+        professores : []      
     }
 
+    componentDidMount(){
+        this.loadUsers();
+    }
+    
+    loadUsers = async () => {
+        let service = new ServiceDb()
+        let users = service.listarProfessoresOnline()
+        //console.log(users)
+        this.setState({professores: users})
+    }
+    
     showModal = () => {
-       this.setState({show: true})
-      };
+        this.setState({show: true})
+    };
     
     hideModal = () => {
         this.setState({show: false})
     };
-
+    
     render() {   
         const professores = this.state.professores 
         return(
-            
-            <div className="ctn-page">
+           
+            <div className="ctn-pageChat">
+                
             <div >
                 <Menu />
             </div>
@@ -62,6 +65,7 @@ export default class PageChat extends Component{
 
                     <ChatMensagens show={this.state.show} handleClose={this.hideModal}/>
                 </div>
+
             </div>
     
 
