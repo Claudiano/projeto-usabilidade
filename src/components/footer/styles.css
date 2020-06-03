@@ -1,0 +1,12 @@
+.ctn-footer{
+    display: flex;
+    height: 70px;
+    width: 100%;
+    background: #0636a0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: #ffffff;
+
+}

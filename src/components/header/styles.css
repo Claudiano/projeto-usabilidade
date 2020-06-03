@@ -1,0 +1,39 @@
+
+.ctn-header{
+    height: 140px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-logo{
+    display: flex;
+    width: 100%;
+    height: 90px;
+    align-items: center;
+}
+
+.header-logo img{
+    width: 230px;
+    height: 50px;
+    margin: 20px;
+}
+
+.header-menu{
+    display: flex;
+    background: #0080FF;
+    width: 100%;
+    height: 50px;
+    flex-direction: row;
+}
+
+
+.ctn-menu{
+    margin-top: 25px;
+    position: fixed;
+    display: flex;
+    left: 0;
+    
+    
+
+}

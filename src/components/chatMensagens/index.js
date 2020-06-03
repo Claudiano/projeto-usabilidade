@@ -62,7 +62,7 @@ function ChatMensagens({ handleClose, show, userSelecionado, prochildren }){
                     ))}
                 
                 </ul>
-                <form className="form" >
+                <form className="form" onSubmit={handleFormSubmit}>
                     <input 
                         className="form__field" 
                         onChange={hadleInputChange}

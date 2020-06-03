@@ -71,3 +71,18 @@
     justify-content: center;
     align-items: center;
 }
+
+.login-falho p{
+    display: flex;
+    color: rgb(245, 210, 11);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.display-none p{
+    display: none;
+}
+
+.ctn-info img{
+    height: 70%;
+}

@@ -9,8 +9,7 @@ export default class LoginPage extends Component{
 
     state = {
         senha: '',
-        login: ""
-
+        login: "",
     }
 
     logar = () => {
@@ -18,6 +17,8 @@ export default class LoginPage extends Component{
         let result = service.validateUser(this.state.login, this.state.senha)
 
         if(result){
+            localStorage.setItem('@usabilidade-app/' + result.login, result);
+
             history.push("/home", {user: result})
         } else {
             alert("usuario não encontrado")
@@ -34,8 +35,7 @@ export default class LoginPage extends Component{
                         <input 
                             onChange={(e) => {
                                 this.setState({login: e.target.value})
-                            } } 
-                            
+                            } }                             
                             placeholder="Usuario" />
                         
                         <input 
@@ -44,12 +44,13 @@ export default class LoginPage extends Component{
                             } } 
                             type="password"
                             placeholder="senha"/>
+                        
 
                         <button onClick={this.logar} >Logar</button>
 
                     </div>
                     <div className="ctn-info">
-                        <h1>Inserir logo</h1>                        
+                        <img src={require('../../images/brasao.png')} />                         
                     </div>
                 </div>
             </div>

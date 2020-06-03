@@ -6,7 +6,7 @@
 
 .ctn-body{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     flex-direction: row;
     padding: 30px 30px 0px;
     margin: 0;
@@ -18,6 +18,8 @@
     display: flex;    
     flex-direction: row;
     justify-content: flex-start;
+    overflow-y: auto;
+    height: 550px;
 
 }
 
@@ -33,6 +35,7 @@
     justify-content: center;
     text-align: center;
     padding: 10px;
+    box-shadow: 0px 4px 8px 0px grey, 0px 4px 8px 0px grey;
 }
 
 .ctn-professor h1{
@@ -40,13 +43,15 @@
     font-weight: bold;
 }
 
-.ctn-logo{
+.ctn-logo {
+    display: flex;
     width: 120px;
     height: 120px;
-    background: #A4A4A4;
     border-radius: 50%;
     margin: 10px auto;
+    border: 2px solid #1b47da;
 }
+
 
 .btn-chat{
     width: 100px;
@@ -54,6 +59,7 @@
     margin-top: 15px;
     background: none;
     border-color: #088A29;
+    border-radius: 25px;
 
     font-weight: bold;
     color: #088A29;
@@ -71,8 +77,5 @@
     margin-right: 30px;
     right: 0;
     bottom: 0;
-
-
-
 }
 

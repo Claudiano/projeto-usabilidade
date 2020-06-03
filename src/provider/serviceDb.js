@@ -12,6 +12,20 @@ export default class ServiceDb{
         { id: 5, login:"daniel", senha: "daniel", nome: "Daniel",status: true, perfil:2  },
         { id: 6, login:"fred", senha: "fred", nome: "Fred",status: true, perfil:2  },
 
+
+        { id: 6, login:"fred", senha: "fred", nome: "Fred",status: true, perfil:2  },
+        { id: 6, login:"fred", senha: "fred", nome: "Fred",status: true, perfil:2  },
+        { id: 6, login:"fred", senha: "fred", nome: "Fred",status: true, perfil:2  },
+        { id: 6, login:"fred", senha: "fred", nome: "Fred",status: true, perfil:2  },
+        { id: 6, login:"fred", senha: "fred", nome: "Fred",status: true, perfil:2  },
+        { id: 6, login:"fred", senha: "fred", nome: "Fred",status: true, perfil:2  },
+        { id: 6, login:"fred", senha: "fred", nome: "Fred",status: true, perfil:2  },
+        { id: 6, login:"fred", senha: "fred", nome: "Fred",status: true, perfil:2  },
+        { id: 6, login:"fred", senha: "fred", nome: "Fred",status: true, perfil:2  },
+        { id: 6, login:"fred", senha: "fred", nome: "Fred",status: true, perfil:2  },
+        { id: 6, login:"fred", senha: "fred", nome: "Fred",status: true, perfil:2  },
+        { id: 6, login:"fred", senha: "fred", nome: "Fred",status: true, perfil:2  },
+
     ]
 
 

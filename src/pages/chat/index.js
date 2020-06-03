@@ -1,10 +1,10 @@
 import React, {useState, Component} from 'react'
 import Menu from '../../components/menu/Menu'
-import ProfessoChat from '../../components/professorChat'
-
 import './style.css'
 import ChatMensagens from '../../components/chatMensagens'
 import ServiceDb from '../../provider/serviceDb'
+import HeaderComponent from '../../components/header'
+import Footer from '../../components/footer'
 
 export default class PageChat extends Component{
         
@@ -36,12 +36,9 @@ export default class PageChat extends Component{
     render() {   
         const professores = this.state.professores 
         return(
-           
+           <>
+            <HeaderComponent />
             <div className="ctn-pageChat">
-                
-            <div >
-                <Menu />
-            </div>
 
             <div className="ctn-body">
                 <h1>Chat</h1>
@@ -50,10 +47,11 @@ export default class PageChat extends Component{
                         professor =>(
                             <div className="style-professor">
                                     <div className="ctn-professor"> 
-                                        <div className="ctn-logo"> </div>
+                                        <div className="ctn-logo">
+                                        <img src={require('../../images/user-icon.png')} />    
+                                        </div>
 
                                         <h1> Nome: {professor.nome}</h1> 
-                                        <h1> Status: {professor.status}</h1> 
 
                                         <button className="btn-chat" 
                                         onClick={ 
@@ -62,14 +60,13 @@ export default class PageChat extends Component{
                                                 this.showModal(professor)
                                                 console.log(this.state.professorSelecionado)
                                                 
-                                            }
-                                        
+                                            }                                        
                                         }>CHAMAR</button>
                                     </div>
                             </div>           
-                                        
-                                        )
-                                        )}
+                                       
+                        )
+                    )}
                 </section>
                 <div className="ctn-chat">
 
@@ -80,6 +77,8 @@ export default class PageChat extends Component{
     
 
         </div>
+        <Footer />
+        </>
         
         )
     }

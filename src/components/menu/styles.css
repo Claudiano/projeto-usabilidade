@@ -1,25 +1,31 @@
 .ctn-menu{
     width: 250px;
-    height: 100vh;
+
   
     display: flex;
     flex-direction: column;
+    background: #0080FF;
 }
 
 .ctn-menu .cnt-image{
-    height: 200px;
+    height: 250px;
     width: 100%;
-    background:#BDBDBD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
-.list-menu {
-    background: #045FB4;
-    height: 100%;
+.ctn-menu .cnt-image img{
+    border-radius: 50%;
+    background:#1b47da;
+    height: 90%;
+    width: 90%;
 }
 
 .menu-item{
     height: 40px;
-    width: 100%;
+    width: auto;
     background: none;
     font-size: 16px;
     font-weight: bold;
@@ -39,5 +45,9 @@
 }
 
 .menu-item a:hover{
-    background: #00BFFF;
+    background: #045FB4;
 }
+
+.display-none{
+    display: none;
+  }
